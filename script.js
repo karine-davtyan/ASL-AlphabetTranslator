@@ -40,14 +40,15 @@ const imageMap = {
 document.getElementById('translateButton').addEventListener('click', () => {
     const textInput = document.getElementById('textInput').value.toUpperCase();
     const imageContainer = document.getElementById('imageContainer');
-    imageContainer.innerHTML = ''; // Clear previous content
+    imageContainer.innerHTML = ''; 
 
     let content = '';
 
     for (let char of textInput) {
         if (imageMap[char]) {
             content += `<img src="${imageMap[char]}" alt="${char}">`;
-        } else {
+        } 
+        else {
             content += `<span>Unsupported character: ${char}</span><br>`;
         }
     }
